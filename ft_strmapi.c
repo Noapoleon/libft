@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:43:58 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/30 17:06:35 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:12:29 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	size_t	len;
 	size_t	i;
 
+	if ((s == NULL) || (f == NULL))
+		return (NULL);
 	len = ft_strlen(s);
 	tmp = (char *)malloc(sizeof(char) * (len + 1));
 	if (tmp == NULL)

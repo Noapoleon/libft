@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 17:38:09 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/29 18:13:05 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:09:00 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	char	*tmp;
 	size_t	i;
 
+	if (s == NULL)
+		return (NULL);
 	tmp = (char *)malloc(sizeof(char) * (len + 1));
 	if (tmp == NULL)
 		return (NULL);

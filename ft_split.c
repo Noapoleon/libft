@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 22:12:26 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/30 16:06:11 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:11:15 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ char	**ft_split(const char *s, char c)
 	char	**tmp;
 	size_t	i;
 
+	if (s == NULL)
+		return (NULL);
 	i = count_words(s, c);
 	tmp = (char **)malloc(sizeof(char *) * (i + 1));
 	if (tmp == NULL)

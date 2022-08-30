@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 17:06:54 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/30 17:43:39 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:15:27 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int i;
 
-	if (s == NULL)
-		return ;
 	i = 0;
 	while (s[i])
 	{

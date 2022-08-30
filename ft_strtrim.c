@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 00:59:22 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/30 18:44:31 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:10:43 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	char	*tmp;
 	size_t	size;
 
+	if ((s1 == NULL) || (set == NULL))
+		return (NULL);
 	while (isset(*s1, set))
 		++s1;
 	start = (char *)s1;

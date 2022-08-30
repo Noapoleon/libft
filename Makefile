@@ -8,7 +8,6 @@ AR	= ar rcs
 
 # Files
 NAME	=	libft.a
-INCDIR	=	includes
 SRCS_1	=	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -57,8 +56,7 @@ OBJS	=	$(SRCS_1:.c=.o) \
 OBJS_B	=	$(SRCS_B:.c=.o)
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $(OBJDIR)/$(<:.c=.o) -I $(INCDIR)
-
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
