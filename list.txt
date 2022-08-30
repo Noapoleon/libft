@@ -1,0 +1,5 @@
+NULL proof the entire library (e.g.: if (s1 == NULL || s2 == NULL) return (NULL);
+
+What is the use of the 'unsigned int' in (*f) for ft_strmapi.c
+
+weird stderr stdout in ft_putchar_fd
