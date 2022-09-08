@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 15:28:50 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/27 22:56:19 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/09/07 03:34:38 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char *tmp;
-	size_t i;
+	char	*tmp;
+	size_t	i;
 
 	if ((nmemb == 0) || (size == 0))
 		return (NULL);
@@ -26,7 +26,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 			tmp[i++] = 0;
 	return (tmp);
 }
-
 
 /*
  * TEST WITH ft_print_memory

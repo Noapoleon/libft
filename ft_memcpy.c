@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 00:38:03 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/26 00:43:00 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/09/07 04:38:20 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,12 @@
 
 void	*ft_memcpy(void *dest, void *src, size_t n)
 {
+	void	*og_dest;
+
+	og_dest = dest;
 	while (n--)
 		*(unsigned char *)dest++ = *(unsigned char *)src++;
-	return (dest);
+	return (og_dest);
 }
 
 /*

@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 17:48:35 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/30 18:42:30 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/09/08 03:24:50 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
-size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-size_t	ft_strlcat(char *dest, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-char	*strchr(const char *s, int c);
-char	*strrchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);

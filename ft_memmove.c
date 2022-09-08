@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 01:23:58 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/25 18:43:07 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/09/08 01:23:47 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,18 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*to;
-	unsigned char	*from;
+	void	*og_dest;
 
-	to = dest;
-	from = (unsigned char *)src;
-	if ((to == from) || (n == 0))
-		return (to);
-	if (to < from)
+	if ((dest == src) || (n == 0))
+		return (dest);
+	og_dest = dest;
+	if (dest < src)
 		while (n--)
-			*to++ = *from++;
+			*((unsigned char *)dest++) = *((unsigned char *)src++);
 	else
-	{
-		while (n - 1 != 0)
-		{
-			to[n - 1] = from[n - 1];
-			--n;
-		}
-		to[n - 1] = from[n - 1];
-	}
-	return (dest);
+		while (n--)
+			*((unsigned char *)(dest + n)) = *((unsigned char *)(src + n));
+	return (og_dest);
 }
 
 /*

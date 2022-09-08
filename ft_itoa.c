@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:06:40 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/30 17:56:50 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/09/07 03:26:20 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_itoa(int n)
 {
-	long nn;
-	long pow;
-	int len_pow;
-	char *tmp;
+	long	nn;
+	long	pow;
+	int		len_pow;
+	char	*tmp;
 
 	nn = (long)n * (1 + (n < 0) * -2);
 	pow = 1;
@@ -29,7 +29,7 @@ char	*ft_itoa(int n)
 	}
 	tmp = (char *)malloc(sizeof(char) * (len_pow + 1));
 	if (tmp == NULL)
-		return (NULL); // FIX LATER
+		return (NULL);
 	tmp[0] = '-';
 	len_pow = (n < 0);
 	while (pow > 0)

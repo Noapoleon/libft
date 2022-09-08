@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 00:45:26 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/27 02:05:37 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/09/07 05:02:28 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,23 @@
 
 char	*ft_strnstr(const char *hay, const char *nee, size_t len)
 {
-	size_t i;
+	size_t	i;
+	size_t	j;
 
-	if ((*nee == '\0') || (len == 0))
+	if (nee[0] == '\0')
 		return ((char *)hay);
-	while (*hay)
+	i = 0;
+	while (*hay && (i < len))
 	{
-		i = 0;
-		while ((hay[i] == nee[i]) && hay[i]  && (i < len))
+		j = 0;
+		while ((hay[j] == nee[j]) && hay[j] && ((i + j) < len))
 		{
-			if (nee[i] == 0)
-				break ;
-			++i;
+			if (nee[j + 1] == 0)
+				return ((char *)hay);
+			++j;
 		}
-		if ((i == len) && (hay[i - 1] == nee[i - 1]))
-			return ((char *)hay);
-		if (nee[i] == '\0')
-			return ((char *)hay);
 		++hay;
+		++i;
 	}
 	return (NULL);
 }

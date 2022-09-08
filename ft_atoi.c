@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 02:08:08 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/27 14:54:57 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/09/07 03:34:12 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static int	my_iswspc(int c)
 
 int	ft_atoi(const char *nptr)
 {
-	long nb;
-	int sign;
+	long	nb;
+	int		sign;
 
 	nb = 0;
 	while (*nptr && my_iswspc(*nptr))
