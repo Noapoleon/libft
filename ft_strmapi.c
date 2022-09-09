@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:43:58 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/09 03:32:51 by noa              ###   ########.fr       */
+/*   Updated: 2022/09/09 18:54:00 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	char	*tmp;
-	size_t	len;
-	size_t	i;
+	char			*tmp;
+	size_t			len;
+	unsigned int	i;
 
 	if ((s == NULL) || (f == NULL))
 		return (NULL);
