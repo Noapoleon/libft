@@ -8,7 +8,7 @@ AR	= ar rcs
 
 # Files
 NAME	=	libft.a
-SRCS_1	=	ft_isalpha.c \
+SRCS	=	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
 		ft_isascii.c \
@@ -30,8 +30,8 @@ SRCS_1	=	ft_isalpha.c \
 		ft_strnstr.c \
 		ft_atoi.c \
 		ft_calloc.c \
-		ft_strdup.c 
-SRCS_2	=	ft_substr.c \
+		ft_strdup.c \
+		ft_substr.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_split.c \
@@ -51,12 +51,12 @@ SRCS_B	=	ft_ltsnew.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
 		ft_lstmap.c
-OBJS	=	$(SRCS_1:.c=.o) \
-			$(SRCS_2:.c=.o)
+OBJS	=	$(SRCS:.c=.o)
 OBJS_B	=	$(SRCS_B:.c=.o)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
