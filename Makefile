@@ -44,8 +44,8 @@ SRCS	=	 $(SRCDIR)ft_isalpha.c \
 		$(SRCDIR)ft_putstr_fd.c \
 		$(SRCDIR)ft_putendl_fd.c \
 		$(SRCDIR)ft_putnbr_fd.c
-SRCS_B	=	$(SRCDIR)ft_ltsnew.c \
-		$(SRCDIR)ft_ltsadd_front.c \
+SRCS_B	=	$(SRCDIR)ft_lstnew.c \
+		$(SRCDIR)ft_lstadd_front.c \
 		$(SRCDIR)ft_lstsize.c \
 		$(SRCDIR)ft_lstlast.c \
 		$(SRCDIR)ft_lstadd_back.c \
@@ -57,7 +57,7 @@ OBJS	=	$(SRCS:.c=.o)
 OBJS_B	=	$(SRCS_B:.c=.o)
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I$(INCDIR)
 
 all: $(NAME)
 
@@ -70,7 +70,7 @@ bonus: $(OBJS) $(OBJS_B)
 	ranlib $(NAME)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
 	$(RM) $(NAME)
