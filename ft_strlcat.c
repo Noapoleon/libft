@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:13:53 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/08 14:03:19 by noa              ###   ########.fr       */
+/*   Updated: 2022/09/15 20:50:12 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dst_len;
 	size_t	src_len;
 
+	if ((dst == NULL) && (size == 0))
+		return (0);
 	og_size = size;
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);

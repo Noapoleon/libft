@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 17:38:09 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/09 16:26:42 by noa              ###   ########.fr       */
+/*   Updated: 2022/09/15 22:29:54 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	size;
 
+	if (s == NULL)
+		return (NULL);
 	if ((size_t)start >= ft_strlen(s) || len == 0)
 		size = 1;
 	else if (ft_strlen(s + start) > len)

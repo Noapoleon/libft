@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 00:52:11 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/09 19:12:22 by noa              ###   ########.fr       */
+/*   Updated: 2022/09/15 18:37:26 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	p = s;
 	while (n--)
-		*p++ = c;
+		*p++ = (char)c;
 	return (s);
 }
 

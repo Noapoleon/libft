@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 18:24:58 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/30 19:08:24 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/09/15 22:28:53 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strdup(const char *s)
 	char	*tmp;
 	int		i;
 
-	if (s == NULL)
-		return (NULL);
 	tmp = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (tmp == NULL)
 		return (NULL);

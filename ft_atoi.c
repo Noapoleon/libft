@@ -6,16 +6,11 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 02:08:08 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/07 03:34:12 by noa              ###   ########.fr       */
+/*   Updated: 2022/09/15 21:36:43 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	my_iswspc(int c)
-{
-	return (((c >= 9) && (c <= 13)) || (c == ' '));
-}
 
 int	ft_atoi(const char *nptr)
 {
@@ -23,7 +18,7 @@ int	ft_atoi(const char *nptr)
 	int		sign;
 
 	nb = 0;
-	while (*nptr && my_iswspc(*nptr))
+	while (*nptr && (((*nptr >= 9) && (*nptr <= 13)) || (*nptr == ' ')))
 		++nptr;
 	sign = 1;
 	if ((*nptr == '-') || (*nptr == '+'))
@@ -32,7 +27,7 @@ int	ft_atoi(const char *nptr)
 			sign = -1;
 		++nptr;
 	}
-	while (ft_isdigit(*nptr))
+	while ((*nptr >= '0') && (*nptr <= '9'))
 		nb = (nb * 10) + (*nptr++ - 48);
 	return (sign * (int)nb);
 }
@@ -43,6 +38,9 @@ int	ft_atoi(const char *nptr)
 int main(int ac, char ** av)
 {
 	(void)ac;
+	(void)av;
+
+	fprintf(stderr, "long max ------> %ld\n", sizeof(long));
 	fprintf(stderr, "atoi ----> %d\n", atoi(av[1]));
 	fprintf(stderr, "ft_atoi -> %d\n", ft_atoi(av[1]));
 	return (0);

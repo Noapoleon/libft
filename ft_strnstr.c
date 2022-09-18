@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/26 00:45:26 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/07 05:02:28 by noa              ###   ########.fr       */
+/*   Created: 2022/09/15 22:51:42 by nlegrand          #+#    #+#             */
+/*   Updated: 2022/09/15 22:51:43 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *hay, const char *nee, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if ((hay == NULL) && (len == 0))
+		return (NULL);
 	if (nee[0] == '\0')
 		return ((char *)hay);
 	i = 0;

@@ -69,11 +69,15 @@ bonus: $(OBJS) $(OBJS_B)
 	$(AR) $(NAME) $(OBJS) $(OBJS_B)
 	ranlib $(NAME)
 
+so:
+	$(CC) -c -fPIC $(CFLAGS) $(SRCS) $(SRCS_B)
+	gcc -shared -o libft.so $(OBJS) $(OBJS_B)
+
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) libft.so
 
 re: fclean all
 

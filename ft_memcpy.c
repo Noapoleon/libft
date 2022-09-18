@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 00:38:03 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/07 04:38:20 by noa              ###   ########.fr       */
+/*   Updated: 2022/09/15 22:47:43 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, void *src, size_t n)
 {
 	void	*og_dest;
 
+	if ((dest == NULL) && (src == NULL))
+		return (NULL);
 	og_dest = dest;
 	while (n--)
 		*(unsigned char *)dest++ = *(unsigned char *)src++;
@@ -28,10 +30,9 @@ void	*ft_memcpy(void *dest, void *src, size_t n)
 int	main(int ac, char **av)
 {
 	(void)ac;
-	char s1[100];
+	(void)av;
 
-	ft_memcpy(s1, av[1], 5);
-	fprintf(stderr, "ft_memcpy -> %s\n", s1);
+	ft_memcpy(((void*)0), ((void*)0), 3);
 	return (0);
 }
 */
