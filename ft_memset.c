@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 00:52:11 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/15 18:37:26 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/06 16:04:36 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,26 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*p;
+	size_t			dup;
+	size_t			i;
+	void			*og_s;
 
-	p = s;
+	og_s = s;
+	i = 0;
+	while ((n > sizeof(size_t)) && (i++ < sizeof(size_t)))
+	{
+		dup <<= 8;
+		dup |= (unsigned char)c;
+	}
+	while (n > sizeof(size_t))
+	{
+		*(size_t *)s = dup;
+		s += sizeof(size_t);
+		n -= sizeof(size_t);
+	}
 	while (n--)
-		*p++ = (char)c;
-	return (s);
+		*(unsigned char *)s++ = (unsigned char)c;
+	return (og_s);
 }
 
 /*
