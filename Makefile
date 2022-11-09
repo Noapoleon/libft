@@ -1,5 +1,5 @@
 # Compiler options
-CC		= gcc
+CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
 # Other
