@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 19:53:21 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/08 23:06:13 by noa              ###   ########.fr       */
+/*   Updated: 2022/11/08 14:33:01 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(int ac, char **av)
-{
-	(void)ac;
-	 fprintf(stderr, "addr av[1] -> %p\n", av[1]);
-	 fprintf(stderr, "strrchr ----> %s\n", strrchr(av[1], av[2][0]));
-	 fprintf(stderr, "strrchr ----> %p\n", strrchr(av[1], av[2][0]));
-	 fprintf(stderr, "ft_strrchr -> %s\n", ft_strrchr(av[1], av[2][0]));
-	 fprintf(stderr, "ft_strrchr -> %p\n", ft_strrchr(av[1], av[2][0]));
-	 return (0);
-}
-*/

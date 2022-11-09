@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 22:12:26 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/30 19:11:15 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/09 14:38:23 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,6 @@ static int	cpy_words(char **dest, const char *s, char c)
 			ft_strlcpy(dest[i++], s, len + 1);
 			s += len;
 		}
-		while (*s && *s != c)
-			++s;
 		while (*s && *s == c)
 			++s;
 	}
@@ -86,21 +84,3 @@ char	**ft_split(const char *s, char c)
 	tmp[i] = NULL;
 	return (tmp);
 }
-
-/*
-#include <stdio.h>
-int main(int ac, char **av)
-{
-	(void)ac;
-	char **st;
-	size_t i;
-
-	//fprintf(stderr, "count_words -> %ld\n", count_words(av[1], *av[2]));
-	//fprintf(stderr, "strlen_word -> %ld\n", strlen_word(av[1], *av[2]));
-	st = ft_split(av[1], *av[2]);
-	i = 0;
-	while (st[i] != NULL)
-		fprintf(stderr, "%s\n", st[i++]);
-	return (0);
-}
-*/

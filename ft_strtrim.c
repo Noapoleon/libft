@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 00:59:22 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/30 19:10:43 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/08 14:33:15 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,18 +48,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 		ft_strlcpy(tmp, start, size);
 	return (tmp);
 }
-
-/*
-#include <stdio.h>
-int	main(int ac, char **av)
-{
-	(void)ac;
-	(void)av;
-	char *s1;
-
-	s1 = ft_strtrim(av[1], av[2]);
-	fprintf(stderr, "av[1] ------> %s\n", av[1]);
-	fprintf(stderr, "ft_strtrim -> %s\n", s1);
-	return (0);
-}
-*/

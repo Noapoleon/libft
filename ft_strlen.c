@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 00:52:15 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/24 18:03:44 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/09 11:06:45 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	len;
+	char	*ss;
 
-	len = 0;
-	while (s[len])
-		++len;
-	return (len);
+	ss = (char *)s;
+	while (*ss)
+		++ss;
+	return (ss - s);
 }
-
-/*
-#include <stdio.h>
-int	main(int ac, char **av)
-{
-	(void)ac;
-	fprintf(stderr, "ft_strlen -> %lu\n", ft_strlen(av[1]));
-	return (0);
-}
-*/

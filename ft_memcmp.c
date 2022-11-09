@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 00:14:49 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/08/29 21:58:04 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/08 14:25:09 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(int ac, char **av)
-{
-	(void)ac;
-	fprintf(stderr, "av[1] -------> %s\n", av[1]);
-	fprintf(stderr, "av[2] -------> %s\n", av[2]);
-	fprintf(stderr, "memcmp 0 ----> %d\n", memcmp(av[1], av[2], 0));
-	fprintf(stderr, "ft_memcmp 0 -> %d\n", ft_memcmp(av[1], av[2], 0));
-	fprintf(stderr, "memcmp 1 ----> %d\n", memcmp(av[1], av[2], 1));
-	fprintf(stderr, "ft_memcmp 1 -> %d\n", ft_memcmp(av[1], av[2], 1));
-	fprintf(stderr, "memcmp 5 ----> %d\n", memcmp(av[1], av[2], 5));
-	fprintf(stderr, "ft_memcmp 5 -> %d\n", ft_memcmp(av[1], av[2], 5));
-	return (0);
-}
-*/

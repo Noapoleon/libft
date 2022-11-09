@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 17:38:09 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/15 22:29:54 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/08 14:33:37 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,3 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	tmp[i] = '\0';
 	return (tmp);
 }
-
-/*
-#include <stdio.h>
-int main(int ac, char **av)
-{
-	(void)ac;
-	(void)av;
-	char *s1;
-
-	s1 = ft_substr(av[1], 5, 7);
-	fprintf(stderr, "av[1] -----> %s\n", av[1]);
-	fprintf(stderr, "av[1] -----> %p\n", av[1]);
-	fprintf(stderr, "ft_substr -> %s\n", s1);
-	fprintf(stderr, "ft_substr -> %p\n", s1);
-	return (0);
-}
-*/

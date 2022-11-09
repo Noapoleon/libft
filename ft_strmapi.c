@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:43:58 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/15 01:11:03 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/08 14:32:01 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,33 +33,3 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	tmp[i] = '\0';
 	return (tmp);
 }
-
-/*
-#include <stdio.h>
-char	cap_e(unsigned int x, char c)
-{
-	(void)x;
-
-	if (c == 'e')
-		return ('E');
-	return (c);
-}
-char	space_to_underscore(unsigned int x, char c)
-{
-	(void) x;
-
-	if (c == ' ')
-		return ('_');
-	return (c);
-}
-int	main(int ac, char **av)
-{
-	(void)ac;
-	char *s1;
-
-	s1 = ft_strmapi(av[1], &space_to_underscore);
-	fprintf(stderr, "av[1] ------> %s\n", av[1]);
-	fprintf(stderr, "ft_strmapi -> %s\n", s1);
-	return (0);
-}
-*/

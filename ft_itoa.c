@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:06:40 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/07 03:26:20 by noa              ###   ########.fr       */
+/*   Updated: 2022/11/08 14:24:00 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,21 +40,3 @@ char	*ft_itoa(int n)
 	tmp[len_pow] = '\0';
 	return (tmp);
 }
-
-/*
-#include <stdio.h>
-int	main(int ac, char **av)
-{
-	(void)ac;
-	(void)av;
-
-	char *s1;
-	int x;
-
-	x = -10;
-	s1 = ft_itoa(x);
-	fprintf(stderr, "x -------> %d\n", x);
-	fprintf(stderr, "ft_itoa -> %s\n", s1);
-	return (0);
-}
-*/

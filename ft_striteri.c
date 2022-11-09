@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 17:06:54 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/15 22:33:19 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/08 14:29:38 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,31 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		++i;
 	}
 }
-
-/*
-#include <stdio.h>
-void	cap_e(unsigned int x, char *s)
-{
-	(void)x;
-
-	if (*s == 'e')
-		*s = 'E';
-}
-void	space_to_underscore(unsigned int x, char *s)
-{
-	(void)x;
-
-	if (*s == ' ')
-		*s = '_';
-}
-int	main(int ac, char **av)
-{
-	(void)ac;
-
-	ft_striteri(av[1], &cap_e);
-	fprintf(stderr, "av[1] -> %s\n", av[1]);
-	ft_striteri(av[1], &space_to_underscore);
-	fprintf(stderr, "av[1] -> %s\n", av[1]);
-	return (0);
-}
-*/

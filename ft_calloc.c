@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 15:28:50 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/18 11:16:45 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/09 11:03:05 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,15 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	char	*tmp;
 	size_t	i;
 
-	if (nmemb > ((size_t)-1 / size))
+	if (size && nmemb > (ULONG_MAX / size))
 		return (NULL);
 	tmp = malloc(nmemb * size);
 	i = 0;
 	if (tmp != NULL)
+	{
+		tmp[0] = 0;
 		while (i < (nmemb * size))
 			tmp[i++] = 0;
+	}
 	return (tmp);
 }
-
-/*
- * TEST WITH ft_print_memory
- */

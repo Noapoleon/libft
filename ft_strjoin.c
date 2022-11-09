@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 23:51:31 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/09/08 19:15:59 by noa              ###   ########.fr       */
+/*   Updated: 2022/11/08 14:30:40 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,3 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	*tmp = '\0';
 	return (og_tmp);
 }
-
-/*
-#include <stdio.h>
-int main(int ac, char **av)
-{
-	(void)ac;
-	char *s1;
-
-	s1 = ft_strjoin(av[1], av[2]);
-	fprintf(stderr, "av[1] -> %s\n", av[1]);
-	fprintf(stderr, "av[2] -> %s\n", av[2]);
-	fprintf(stderr, "s1 ----> %s\n", s1);
-	return (0);
-}
-*/
