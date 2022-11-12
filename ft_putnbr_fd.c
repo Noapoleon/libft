@@ -16,18 +16,26 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	long	nn;
 	int		neg;
-	long	pow;
-	char	tmp;
+	int		len;
+	char	tmp[11];
+	char	*ptr;
 
-	nn = (long)n * (1 + (neg = n < 0) * -2);
-	pow = 1;
-	while ((nn / pow) >= 10)
-		pow *= 10;
-	write(fd, "-", neg);
-	while (pow > 0)
+	nn = (long)n * (1 - (neg = n < 0) * 2);
+	tmp[0] = '-';
+	len = neg;
+	while (nn >= 10)
 	{
-		tmp = '0' + ((nn / pow) % 10);
-		write(fd, &tmp, 1);
-		pow /= 10;
+		tmp[len++] = nn % 10 + 48;
+		nn /= 10;
 	}
+	tmp[len++] = nn % 10 + 48;
+	ptr = tmp + len - 1;
+	while ((tmp + neg) < ptr)
+	{
+		nn = tmp[neg];
+		tmp[neg++] = *ptr;
+		*ptr-- = (char)nn;
+	}
+	write(fd, tmp, len);
 }
+
