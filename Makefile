@@ -51,8 +51,16 @@ SRCS	=	ft_isalpha.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
-			get_next_line_bonus.c \
-			get_next_line_utils_bonus.c
+			get_next_line.c \
+			get_next_line_utils.c \
+			ft_printf.c \
+			ft_printf_utils.c \
+			ft_printf_utils2.c \
+			ft_printf_conv_parser.c \
+			ft_printf_handler_utils.c \
+			ft_printf_handler_nums.c \
+			ft_printf_handler_chars.c \
+			ft_printf_field_utils.c 
 OBJS	=	$(SRCS:.c=.o)
 
 .c.o:
@@ -70,5 +78,9 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+ls:
+	echo $(SRCS)
+	echo $(OBJS)
 
 .PHONY: all clean fclean re

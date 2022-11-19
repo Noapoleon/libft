@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 18:22:10 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/11/08 14:28:09 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/19 10:27:43 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	write(fd, tmp, len);
 }
-
