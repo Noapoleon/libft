@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 17:48:35 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/11/19 11:49:55 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/19 12:03:58 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,17 +130,6 @@ char	*get_endl(char *buf);
 # define PREF_PLUS		"+"
 # define PREF_SPACE		" "
 # define PREF_MINUS		"-"
-
-// CONV MASKS
-# define CM_C	0x001
-# define CM_S	0x002
-# define CM_PS	0x004
-# define CM_P	0x008
-# define CM_D	0x010
-# define CM_I	0x020
-# define CM_U	0x040
-# define CM_X	0x080
-# define CM_XX	0x100
 
 // FLAG MASKS
 # define FM_MINUS	0x01
