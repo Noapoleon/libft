@@ -6,7 +6,7 @@
 /*   By: nlegrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 19:25:46 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/11/19 11:07:17 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/25 15:50:18 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,15 @@ int	ft_vdprintf(int fd, const char *s, va_list valist)
 	if (write(fd, print.buf, print.pos) == -1)
 		return (-1);
 	return (print.ret);
+}
+
+int	ft_dprintf(int fd, const char *s, ...)
+{
+	va_list	valist;
+	int		ret;
+
+	va_start(valist, s);
+	ret = ft_vdprintf(fd, s, valist);
+	va_end(valist);
+	return (ret);
 }

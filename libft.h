@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 17:48:35 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/11/19 12:03:58 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/25 15:50:57 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,6 +161,7 @@ struct s_print
 // MAIN
 int		ft_printf(const char *s, ...);
 int		ft_vdprintf(int fd, const char *s, va_list valist);
+int		ft_dprintf(int fd, const char *s, ...);
 
 // UTILS
 void	set_state(t_print *print, int mode, const char *s, int fd);
