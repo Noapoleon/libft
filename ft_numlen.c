@@ -6,13 +6,13 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/30 18:12:39 by nlegrand          #+#    #+#             */
-/*   Updated: 2023/06/30 18:13:45 by nlegrand         ###   ########.fr       */
+/*   Updated: 2023/06/30 21:27:57 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_numlen(int n)
+int	ft_numlen(int n)
 {
 	int	len;
 
