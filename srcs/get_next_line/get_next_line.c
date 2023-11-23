@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 04:23:59 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/11/11 14:44:24 by nlegrand         ###   ########.fr       */
+/*   Updated: 2023/11/23 14:34:29 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ char	*get_next_line(int fd)
 	t_line			*line;
 	char			*tmp;
 
+	fds_save(&fds);
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
 	buf = get_fd_buf(fd, &fds);

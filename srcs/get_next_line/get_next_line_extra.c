@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_better.c                             :+:      :+:    :+:   */
+/*   get_next_line_extra.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlegrand <nlegrand@stud.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 17:14:50 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/12/29 17:29:03 by nlegrand         ###   ########.fr       */
+/*   Updated: 2023/11/23 14:33:12 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,34 @@ int	gnl_w(int fd, char **line)
 {
 	*line = get_next_line(fd);
 	if (*line == NULL)
-		return (-1);
-	return (0);
+		return (0);
+	return (1);
+}
+
+t_fds	**fds_save(t_fds **fds)
+{
+	static t_fds	**save;
+
+	if (save == NULL)
+		save = fds;
+	return (save);
+}
+
+void	destroy_gnl_fds(void)
+{
+	t_fds	**fds;
+	t_fds	*cur;
+
+	fds = fds_save(NULL);
+	if (fds != NULL)
+	{
+		cur = *fds;
+		while (cur)
+		{
+			*fds = cur->next;
+			free(cur);
+			cur = *fds;
+		}
+		*fds = NULL;
+	}
 }
